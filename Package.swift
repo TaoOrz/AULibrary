@@ -18,7 +18,11 @@ let package = Package(
         .package(
           url: "https://github.com/onevcat/Kingfisher",
           "8.0.0" ..< "8.1.1"
-        )
+        ),
+        .package(
+          url: "https://github.com/CoderMJLee/MJRefresh",
+          "3.6.0" ..< "3.7.9"
+        ),
     ],
     targets: [
         .binaryTarget(
@@ -26,6 +30,6 @@ let package = Package(
             url:"https://firebasestorage.googleapis.com/v0/b/autotoll-407b9.appspot.com/o/AULibrary%2F1.0.3%2FAULibrary.xcframework.zip?alt=media&token=c6b7ba21-a698-400b-a49d-f41aa2637c64",
             checksum: "8c82af63190339fab8f5d4d10be0f161f342741de360c12df76713bec2b72692"),
         
-        .target(name: "AULibraryManager",dependencies: ["SnapKit","Kingfisher"])
+        .target(name: "AULibraryManager",dependencies: ["SnapKit","Kingfisher","MJRefresh"])
     ]
 )
